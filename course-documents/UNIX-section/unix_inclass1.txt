@@ -11,6 +11,14 @@ ls
 ls -a
 ls -l
 ls -al #look carefully at this output. Do you understand it?
+ls -al | less # looks at output page-by-page
+
+output for first column in ls -al:
+d: directory
+r: read
+w: write
+x: execute
+-: permission denied
 
 2) Files and directories
 
