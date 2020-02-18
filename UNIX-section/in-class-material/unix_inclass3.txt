@@ -1,0 +1,23 @@
+Exercise: 
+(1) Write a simple bash script and make it executable
+(2) Make a more complex bash script and test it
+(3) Move the bash script to a directory in your permanent path
+
+First, make sure to have a zipped file ready. Copy Dprob1.txt to a file called 'tmp' 
+then use gzip to compress it. You should have tmp.gz at the end.
+
+(1) Write simple script with an if/then
+
+a. Make a script called store_data.sh that asks the user for a file name, checks to see if the file exists, then echos the name of the file.
+b. Make the file executable (chmod 755 is one way) and execute it.
+
+(2) Improve the script
+If the file exists the bash script should
+  1. Make a directory called SEQDATA
+  2. Move the file to SEQDATA
+  3. Unzip the file in SEQDATA
+  4. Run head on the file
+
+(3) Try moving the script to /usr/local/bin
+
+

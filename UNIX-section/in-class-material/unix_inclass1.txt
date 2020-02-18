@@ -1,0 +1,79 @@
+Make sure Dprob1.txt is in your home directory.
+You should see the file when you open a terminal a type 'ls' enter.
+$ls
+
+Try the following commands. After running each set of commands
+write/type what you think is happening. Each line is a different command.
+
+1) Directory contents
+
+ls
+ls -a
+ls -l
+ls -al #look carefully at this output. Do you understand it?
+ls -al | less # looks at output page-by-page
+
+output for first column in ls -al:
+d: directory
+r: read
+w: write
+x: execute
+-: permission denied
+
+2) Files and directories
+
+mkdir TMP
+ls
+cp Dprob1.txt Dprob1_copy.txt
+ls
+mv Dprob1_copy.txt TMP/
+cd TMP
+ls
+
+3) Moving around - use the 'pwd' command to see where you are: 
+
+cd
+cd TMP
+cd .
+cd ..
+cd TMP
+cd ~
+cd /
+ls
+cd
+
+4) Fun with files! Use 'ls -al' to see the files.
+
+cd TMP
+cp Dprob1.txt tmp.txt
+cat tmp.txt
+cat Dprob1.txt tmp.txt > bigfile.txt
+ls -al   #What happened here?
+mv bigfile.txt bigfile
+gzip bigfile
+ls -al #What happened to bigfile?
+
+5) Looking at files
+
+head bigfile
+tail bigfile
+less bigfile # Use spacebar and b, q to quit
+
+6) Finding crap in files - what is happening?
+
+grep 'RL' bigfile
+grep 'RL' -c bigfile
+cd ..
+grep -r 'RL' -c TMP/
+
+7) Getting rid of files or directories
+
+rm bigfile
+cd ..
+rm TMP  #did this work?
+rm -r TMP
+
+
+
+
+

@@ -1,0 +1,53 @@
+BASED ON:
+https://www.tutorialspoint.com/awk/index.htm
+
+AWK is a rapid text processor for UNIX
+Really fast and popular
+Named after the initials of the authors: Alfred Aho, Peter Weinberger, and Brian Kernighan
+
+1) Basic Syntax
+
+$awk [options] file ...
+
+$awk '{print}' tmp.txt
+
+You can also put the commands in a file.
+Make a file of commands called commands.awk and put in 
+{print}
+
+$awk -f commands.awk marks.txt
+
+Some examples. What do these do?
+
+$ awk '{print $3 "\t" $4}' marks.txt
+
+$ awk '/a/ {print $4 "\t" $3}' marks.txt
+
+$ awk 'length($0) > 18' marks.txt
+
+Regular expressions:
+
+$ echo -e "This\nThat\nThere\nTheir\nthese" | awk '/^The/'
+
+$ echo -e "Call\nTall\nBall" | awk '/[CT]all/'
+
+$ echo -e "ca\ncat\ncatt" | awk '/cat*/'
+
+CODE Excecution:
+
+#Redirect these outputs to files and look at the files
+
+$ awk 'BEGIN {
+   fruits["mango"] = "yellow";
+   fruits["orange"] = "orange"
+   print fruits["orange"] "\n" fruits["mango"]
+}'
+
+$ awk 'BEGIN {
+   num = 11; if (num % 2 == 0) printf "%d is even number.\n", num; 
+      else printf "%d is odd number.\n", num 
+}'
+
+$ awk 'BEGIN { print "Hello, World !!!" > "/tmp/message.txt" }'
+
+$ awk 'BEGIN {i = 1; while (i < 6) { print i; ++i } }'
