@@ -1,0 +1,11 @@
+d=read.table("RTestData.txt",header=TRUE)
+cor.text(d$fuso, d$pocket)
+cor.test(d$fuso, d$deepest)
+cor.test(d$strep,d$prev)
+fuso_by_depth=lm(d$fuso ~ d$deepest)
+plot(d$deepest,d$fuso)
+abline(fuso_by_depth)
+bugs=lm(d$strep ~ d$prev)
+plot(d$prev,d$strep)
+abline(bugs)
+

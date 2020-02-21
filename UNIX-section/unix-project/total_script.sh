@@ -1,10 +1,13 @@
 #!/bin/bash
 
-cd
-cd REPOSITORIES/SDSU-BIOL-696/UNIX-section/unix-project/
+### To make executable: 
+### > chmod +x total_script/sh 
+### > ./total_script.sh
+### If the .sh fils is in a PATH directory, no need for "./"
+
+cd ~/REPOSITORIES/SDSU-BIOL-696/UNIX-section/unix-project/
 bash Porter_project_bash.sh
-cd
-cd RAW_DATA
+cd ~/RAW_DATA
 bash Porter_fasta_script.sh
 cd ..
 bash Porter_backup.sh P_DATA

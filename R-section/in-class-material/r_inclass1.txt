@@ -1,0 +1,38 @@
+Before starting the script, put these files on your desktop:
+1) RTestData.txt
+2) output.csv
+3) KelleyRcode.txt
+4) r_bash.sh. r.py test.r
+
+#READING DATAFILES & SETTING VARIABLES
+
+First start R, then run these commands
+
+> list.files('~/Desktop') #are all the files present?
+> d1=read.table('~/Desktop/RTestData.txt', header=TRUE)
+> d1
+> fuso
+> d1$fuso
+> attach(d1)
+> fuso
+
+> d2=read.csv('~/Desktop/output.csv')
+> attach(d2)
+Show the data frame 
+Show the V1 variable
+
+#SORTING SUBSETTING DATA
+
+> newdata=d1[order(time),]
+
+https://www.statmethods.net/management/subset.html
+
+> time1=subset(d1, time==‘1’)
+#MORE COMPLEX DATA WRANGLING
+https://r4ds.had.co.nz/transform.html
+
+
+#WRITING FILES
+> write.csv(time1,"~/Desktop/time1.csv")
+
+

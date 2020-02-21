@@ -1,0 +1,27 @@
+1) BASH SCRIPT
+
+#! /bin/bash
+
+echo "r_bash.sh script *running*"
+
+###Test R script###
+
+R --vanilla < test.r > test_r.out
+
+2) PYTHON SCRIPT
+
+import os
+
+os.system("R --vanilla < test.r > output.txt")
+
+3) test.r FILE
+
+library(MASS)
+library(ggplot2)
+data(phones)
+data(ToothGrowth)
+
+ToothGrowth
+
+phones
+
