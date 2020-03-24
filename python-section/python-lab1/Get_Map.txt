@@ -1,0 +1,78 @@
+
+##This notebook reads in a 
+
+# In[1]:
+
+import pandas as pd
+import numpy as np
+from scipy import stats
+
+## https://docs.scipy.org/doc/scipy/reference/stats.html
+
+# ### Filter data 
+# #### 1250 sample depth
+
+# In[2]:
+
+data=pd.read_csv('ag_map_with_alpha.txt', sep='\t', index_col=False, low_memory=False)
+data
+
+
+# In[3]:
+
+# Remove samples with missing data
+data = data.drop(data[(data.sex == 'Unspecified')].index)
+data = data.drop(data[(data.age_corrected == 'Unspecified')].index)
+data['age_corrected']=pd.to_numeric(data.age_corrected, downcast='integer')
+data = data.drop(data[(data.age_corrected < 20)|(data.age_corrected > 69)].index)
+data = data.drop(data[ (data.subset_healthy != 'True') & (data.subset_healthy != 'Yes') ].index)
+data['pcr_primers']=data.pcr_primers.str.replace("FWD:",'').str[:19]
+
+
+# In[4]:
+
+# make mapping file
+data_select = pd.DataFrame(data, columns=["#SampleID","barcode","pcr_primers","sex","age_corrected","subset_healthy","observed_otus_1250"])
+data_select = data_select.rename(columns={"barcode":"BarcodeSequence","pcr_primers":"LinkerPrimerSequence","age_corrected":"Age","subset_healthy":"Healthy","observed_otus_1250":"otus"})
+data_select["Description"]="NA"
+data_select
+
+
+# ### Select data
+
+# In[5]:
+
+# get male only
+male_data=data_select.loc[(data_select['sex']=='male')]
+# get female only
+female_data=data_select.loc[(data_select['sex']=='female')]
+
+male_obs = pd.to_numeric(male_data.otus, downcast='float')
+print(male_obs.head(10))
+
+female_obs = pd.to_numeric(female_data.otus, downcast='float')
+print(female_obs.head(10))
+
+aov=stats.f_oneway(male_obs,female_obs)
+print(aov)
+
+# In[37]:
+
+# save map file
+male_data.to_csv('AmericanGutMale1250.txt',sep="\t", index=False)
+female_data.to_csv('AmericanGutFemale1250.txt',sep="\t", index=False)
+
+
+# In[7]:
+
+# get youth for both sex, Age < 46
+youth_data=data_select.loc[(data_select['Age'])<46]
+# get old data for both sex, Age >=46
+old_data=data_select.loc[(data_select['Age']>=46)]
+
+
+# In[9]:
+
+# save map file
+youth_data.to_csv('AmericanGutYouth1250.txt',sep="\t",index=False)
+old_data.to_csv('AmericanGutOld1250.txt',sep="\t",index=False)

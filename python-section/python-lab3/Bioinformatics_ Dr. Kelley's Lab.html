@@ -1,0 +1,477 @@
+
+<!-- saved from url=(0053)https://kelleybioinfo.org/algorithms/basics/index.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=350"> 
+<link rel="shortcut icon" href="http://kelleybioinfo.org/algorithms/favicon.ico">
+
+<title>Bioinformatics| Dr. Kelley's Lab</title>
+<!--<base target="_self">--><base href="." target="_self">
+
+
+<link rel="shortcut icon" href="https://kelleybioinfo.org/algorithms/basics/favicon.ico">
+<!--<base target="_self">--><base href="." target="_self">
+
+
+<script language="javascript">
+	function BrowseDefault(hyperlink){
+		document.getElementById('indexform').action = hyperlink;
+		document.getElementById('indexform').submit();
+	}	
+	
+	function getRandomColor() {
+		var randColor = "";
+		do{
+			randColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16);	
+		} while(randColor.length!=7);
+		
+		return(randColor);
+	}
+</script>
+
+<!----------- http://ben-tools.blogspot.com/2011/04/tools-css-gradient-generator.html ----------->
+<style type="text/css">
+.tablebackground  {
+background: #1E3F5C; /* Old browsers */
+background: -moz-linear-gradient(top,  #1E3F5C 14%, #3673a5 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(14%,#1E3F5C), color-stop(100%,#3673a5)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #1E3F5C 14%,#3673a5 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #1E3F5C 14%,#3673a5 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #1E3F5C 14%,#3673a5 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #1E3F5C 14%,#3673a5 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1E3F5C', endColorstr='#3673a5',GradientType=0 ); /* IE6-9 */
+}
+
+.tdheader {
+background: #45484d; /* Old browsers */
+background: -moz-linear-gradient(top,  #0000CC 14%, #000066 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(14%,#0000CC), color-stop(100%,#000066)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #0000CC 14%,#000066 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #0000CC 14%,#000066 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #0000C C14%,#000066 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #0000CC 14%,#000066 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000CC', endColorstr='#000066',GradientType=0 ); /* IE6-9 */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+background: #282828; /* Old browsers */
+background: -moz-linear-gradient(top,  #282828 0%, #000000 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#282828), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #282828 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #282828 0%,#000000 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #282828 0%,#000000 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #282828 0%,#000000 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#282828', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+@font-face {
+        font-family:neuropol;
+        src: url(/fonts/neuropol.ttf);
+
+}
+
+thisheader{
+    font-family:neuropol;
+}
+
+a {
+    text-decoration: none;
+}
+a:link, a:visited {
+    color: #C0C0C0;
+    text-decoration: none;
+}
+a:hover {
+    color: white;	
+	font-weight:bold;
+}
+</style>
+
+<!--webbot bot='PurpleText'
+PREVIEW = '
+Developed by Dennis Didulo for
+Dr. Scott Kelley
+San Diego State University
+(c) 2013 - 2018  All Rights Reserved'
+-->
+<style>
+	input[type="button"], input[type="reset"], input[type="submit"]{ 
+		font-size: 10px; 
+		font-family: Verdana; 
+		text-transform: uppercase; 
+		font-weight: bold
+	}
+</style>
+
+
+<script language="javascript">
+function SayWrong(){
+//alert("Wrong.");
+//return;
+randvalue = (Math.random()*106)+1;
+	switch(Math.floor(randvalue)){
+		case 1: alert("Noooooo!"); break;
+		case 2: alert("Arghhh!"); break;
+		case 3: alert("Oooh!"); break;
+		case 4: alert("Back to Age 1"); break;
+		case 5: alert("What age are you in?"); break;
+		case 6: alert("hehe what a dork hehehe"); break;
+		case 7: alert("There's only two ways this can end"); break;
+		case 8: alert("Burn baby burn"); break;
+		case 9: alert("Clean up on isle 5"); break;
+		case 10: alert("Die, Weakling!"); break;
+		case 11: alert("Going, Going, Gone"); break;
+		case 12: alert("Is there a doctor in the house!"); break;
+		case 13: alert("Oh - Did that hurt"); break;
+		case 14: alert("Oww - do you have a booboo"); break;
+		case 15: alert("Wussie"); break;
+		case 16: alert("You should've gone to Disney Land"); break;
+		case 17: alert("You're gonna need a massage after this"); break;
+		case 18: alert("You're gonna pay for that!"); break;
+		case 19: alert("I have a very bad feeling about this"); break;
+		case 20: alert("Somebody Dial 911!"); break;
+		case 21: alert("It is pointless to resist"); break;
+		case 22: alert("You should not have come back"); break;
+		case 23: alert("Your getting pretty ambitious ain't ya"); break;
+		case 24: alert("You made a mistake, well that was entirely unacceptable."); break;
+		case 25: alert("Are you still there?"); break;
+		case 26: alert("Ooh that's gotta hurt"); break;
+		case 27: alert("You are beaten, it is useless to resist"); break;
+		case 28: alert("Don't make me destroy you"); break;
+		case 29: alert("That's impossible even for a computer"); break;
+		case 30: alert("Mother said there'd be days like this"); break;
+		case 31: alert("My, aren't we touchy today"); break;
+		case 32: alert("Woah! what the hell's your problem"); break;
+		case 33: alert("I am gravely disappointed in you"); break;
+		case 34: alert("Common, quit stalling!"); break;
+		case 35: alert("Now don't you bet your life on it"); break;
+		case 36: alert("You know, It could be worse"); break;
+		case 37: alert("Now listen to me, I beg of you not to do this"); break;
+		case 38: alert("That's hitting low"); break;
+		case 39: alert("You gonna do something or just stand there and bleed"); break;
+		case 40: alert("I cant cope with this, I will go lie down somewhere"); break;
+		case 41: alert("I'm afraid that's something I cannot allow to happen"); break;
+		case 42: alert("What we've got here is, failure to communicate"); break;
+		case 43: alert("Keep it you'll be carrying your face home in a doggy bag"); break;
+		case 44: alert("craaaaaaaaap"); break;
+		case 45: alert("Are you gonna bark all day little doggy or are you gonna bite"); break;
+		case 46: alert("I specifically said, no geeks"); break;
+		case 47: alert("This game has gone on long enough"); break;
+		case 48: alert("Enough talk - let's get on with it"); break;
+		case 49: alert("You have one more chance, apologize and resign"); break;
+		case 50: alert("**** you, yeah thats my message"); break;
+		case 51: alert("Run home to your mother boy"); break;
+		case 52: alert("Just what the heck do you think you're doin"); break;
+		case 53: alert("I'm growing impatient"); break;
+		case 54: alert("Alright, that's the last straw, time to take out the trash"); break;
+		case 55: alert("Hey bud what's your problem"); break;
+		case 56: alert("Sweet mother of god, What is the Holdup"); break;
+		case 57: alert("You gotta be ****in kidding"); break;
+		case 58: alert("Go Ahead Make my Day"); break;
+		case 59: alert("I'm warning you, I'm Seriously Stressed here"); break;
+		case 60: alert("You Still Here it's over, Go Home, go"); break;
+		case 61: alert("Woah somebody was up late"); break;
+		case 62: alert("You again don't you have a life"); break;
+		case 63: alert("well isn't that special"); break;
+		case 64: alert("Oh Crap"); break;
+		case 65: alert("there's something screwy around here"); break;
+		case 66: alert("i've never been so humiliated in all my life"); break;
+		case 67: alert("would it be too much to ask if we could make up our minds"); break;
+		case 68: alert("oh you again"); break;
+		case 69: alert("houston we have a problem"); break;
+		case 70: alert("Frankly son, you frighten me"); break;
+		case 71: alert("C'mon, gimmie a break"); break;
+		case 72: alert("I would not do such things if I were you"); break;
+		case 73: alert("Leave me alone"); break;
+		case 74: alert("Do you feel lucky, punk"); break;
+		case 75: alert("When my work is finished, i'm coming back for you"); break;
+		case 76: alert("My advice to you, start drinking heavily"); break;
+		case 77: alert("dont do that"); break;
+		case 78: alert("nice try but I'm afraid you can't do that"); break;
+		case 79: alert("I will be standing by to assist you if needed"); break;
+		case 80: alert("Oh no, we're all doomed"); break;
+		case 81: alert("Roger That! "); break;
+		case 82: alert("you tried your best, and you failed miserably"); break;
+		case 83: alert("Oh Good Grief"); break;
+		case 84: alert("You better cut it out or I'll pound you"); break;
+		case 85: alert("Its too late to surrender now"); break;
+		case 86: alert("Ahh! you Eediot!"); break;
+		case 87: alert("Oh that was painful wasnt it"); break;
+		case 88: alert("That had to hurt"); break;
+		case 89: alert("come on man"); break;
+		case 90: alert("oh my god we're burning alive"); break;
+		case 91: alert("tell ya mother you're not coming home"); break;
+		case 92: alert("Boy, you're hurting me"); break;
+		case 93: alert("Seriously?"); 
+		case 94: alert("cut me some slack jack"); break;
+		case 95: alert("what the hell was that"); break;
+		case 96: alert("theres no sign of intelligent life anywhere"); break;
+		case 97: alert("the line must be drawn here"); break;
+		case 98: alert("Ooooo that sux"); break;
+		case 99: alert("i cant take it any more"); break;
+		case 100: alert("for gods sake get on with it"); break;
+		case 101: alert("thats gotta hurt"); break;
+		case 102: alert("I'm gonna hit you so hard, it will make your ancestors dizzy"); break;
+		case 103: alert("i would not do such things if i were u"); break;
+		case 104: alert("stop that incessant clicking"); break;
+		case 105: alert("you stink"); break;
+		case 106: alert("No tears please"); break;		
+	}
+}
+
+function SayRight(){
+//alert("Correct!");
+//return;
+randvalue = (Math.random()*50)+1;
+	switch(Math.floor(randvalue)){
+		case 1	: alert("Yes"); break;
+		case 2	: alert("All Hail"); break;
+		case 3	: alert("You Should See the Other Guy"); break;
+		case 4	: alert("Excellent"); break;
+		case 5	: alert("Damn you're good"); break;
+		case 6	: alert("Good One!"); break;
+		case 7	: alert("Show no mercy"); break;
+		case 8	: alert("Hoohah!"); break;
+		case 9	: alert("You're the man"); break;
+		case 10	: alert("All too easy!"); break;
+		case 11	: alert("Rock and Roll"); break;
+		case 12	: alert("You better get out of here while the getting's good"); break;
+		case 13	: alert("Well blow me down"); break;
+		case 14	: alert("Strength in Unity!"); break;
+		case 15	: alert("Oh boy that felt good"); break;
+		case 16	: alert("Now now, don't be bashful"); break;
+		case 17	: alert("Our thoughts are one!"); break;
+		case 18	: alert("Triumph through Sacrifice!"); break;
+		case 19	: alert("COOL!"); break;
+		case 20	: alert("Never say die!"); break;
+		case 21	: alert("By your command"); break;
+		case 22	: alert("OH Yeah!"); break;
+		case 23	: alert("You're not as stupid as I thought, you might even be intelligent"); break;
+		case 24	: alert("You learn quickly, that's good - I like that"); break;
+		case 25	: alert("A most excellent idea sire"); break;
+		case 26	: alert("Hail to the King!"); break;
+		case 27	: alert("Impressive"); break;
+		case 28	: alert("go,go,go,go,go,go"); break;
+		case 29	: alert("Excellent"); break;
+		case 30	: alert("Its Peanut Butter Jelly Time!!!"); break;
+		case 31	: alert("Heh didnt think you could do it did ya"); break;
+		case 32	: alert("Now the real game begins"); break;
+		case 33	: alert("And now ladies and gentlemen let's get ready to rumble!!!"); break;
+		case 34	: alert("Hey this is great man"); break;
+		case 35	: alert("Very shagadelic"); break;
+		case 36	: alert("The force will be with you, always"); break;
+		case 37	: alert("Smashing, baby!"); break;
+		case 38	: alert("You fight with the strength of many men sir knight"); break;
+		case 39	: alert("That was waaay too easy"); break;
+		case 40	: alert("Yeeehaaa"); break;
+		case 41	: alert("Nice"); break;
+		case 42	: alert("Oooh Yeah!"); break;
+		case 43	: alert("Amen brothers and sisters!"); break;
+		case 44	: alert("It's almost too easy"); break;
+		case 45	: alert("Bruised, battered, but never defeated"); break;
+		case 46	: alert("Wow your amazing dude"); break;
+		case 47	: alert("No way"); break;
+		case 48	: alert("Lets get it on"); break;
+		case 49	: alert("Revenge is so very sweet"); break;
+		case 50 : alert("Is it hot in here, or is it just me?"); 
+	}
+}
+</script>
+
+</head>
+
+<body>
+
+<form name="indexform" id="indexform" action="http://kelleybioinfo.org/" method="POST">
+<input type="hidden" name="email" id="email" value="">
+<input type="hidden" name="pw" id="pw" value="">
+</form> 
+<div align="center">
+
+
+<!-- <table class="tablebackground" border="2" bordercolorlight="#C0C0C0" bordercolordark="#666666" width="340" align="center" height="457">  -->
+<table border="2" bordercolorlight="#C0C0C0" bordercolordark="#666666" cellspacing="0" cellpadding="0" style="border-collapse: collapse" bgcolor="#FFFFFF">
+	<tbody><tr>
+		<td class="tdheader" id="thisheader" align="center" height="64" onclick="document.getElementById(&#39;indexform&#39;).submit();" onmouseover="style.cursor=&#39;pointer&#39;" onmouseout="style.cursor=&#39;normal&#39;">
+		<p align="center">
+		<span>
+		<font style="font-family:neuropol; font-size: 25" color="#35A810">
+		<strong style="font-weight: 400">Kelley Bioinformatics</strong></font></span>
+		
+		</p><div style="position: absolute; top:35px; right:50%; margin-right:110px;  height:15px">
+		<p align="left"><a href="https://kelleybioinfo.org/algorithms/basics/index.php#" style="text-decoration: none" onclick="BrowseDefault(&#39;../about/about.php&#39;)">
+		<font face="Arial" color="Yellow" size="1">About</font></a>
+		</p></div>		
+
+		<div style="position: absolute; 
+						top:35px;	left:49%; margin-left:0px;  height:15px">
+		<p align="left">
+		<a href="https://kelleybioinfo.org/algorithms/basics/index.php#" style="text-decoration: none">
+		<font face="Arial" color="Yellow" size="1"></font></a>
+		</p></div>
+
+
+
+
+		<div style="position: absolute; top:35px; left:50%; margin-left:107px;  height:15px">
+		<p align="left"><a href="https://kelleybioinfo.org/algorithms/basics/index.php#" style="text-decoration: none" onclick="BrowseDefault(&#39;#&#39;)">
+		<font face="Arial" color="Yellow" size="1">Basics</font></a>
+		</p></div>			
+		
+		</td>	
+	</tr>
+	<tr>
+		
+<!--
+	<tr>
+		<td class="tdheader" id="thisheader" align="center" height="64" onclick="window.open('http://kelleybioinfo.org/','_self')" onmouseover="style.cursor='pointer'" onmouseout="style.cursor='normal'">
+		<p align="center">
+        <span>
+        <font style="font-family:neuropol; font-size: 25" color="#35A810">
+        <strong style="font-weight: 400">Kelley Bioinformatics</strong></font></span>
+	</td>	
+	</tr>
+	<tr> -->
+		<td align="center" width="88%" height="381">
+<div align="center" style="position:relative">
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%" bgcolor="#3673A5" height="697">
+  <tbody><tr>
+    <td width="100%" height="34" bgcolor="#1E3F5C">
+    <p align="center"><b><font face="Calibri" color="#FFFFFF">Basics</font></b></p></td>
+  </tr>
+  <tr>
+    <td width="100%" height="34" onmouseover="javascript: this.style.backgroundColor=getRandomColor()" onmouseout="this.style.backgroundColor=&#39;#3673A5&#39;" style="background-color: rgb(54, 115, 165);">
+    <p align="center"><font face="Calibri" color="#C0C0C0"><a target="_blank" href="https://kelleybioinfo.org/algorithms/basics/basics/usingkelleybioinfo.pdf">Using Kelley Bioinfo</a></font></p></td>
+  </tr>
+<!--  <tr>
+    <td width="100%" height="34" onmouseover="javascript: this.style.backgroundColor=getRandomColor()" onmouseout="this.style.backgroundColor='#3673A5'">
+    <p align="center"><font face="Calibri" color="#C0C0C0"><a target="_blank" href="basics/whybioinformatics.pdf">Why Bioinformatics</a></font></td>
+  </tr>
+-->  
+  <tr>
+    <td width="100%" height="34" onmouseover="javascript: this.style.backgroundColor=getRandomColor()" onmouseout="this.style.backgroundColor=&#39;#3673A5&#39;">
+    <p align="center"><font face="Calibri" color="#C0C0C0"><a target="_blank" href="https://kelleybioinfo.org/algorithms/basics/basics/dnarnaprotein.pdf">DNA → RNA → Protein</a></font></p></td>
+  </tr>
+  <tr>
+    <td width="100%" height="34" onmouseover="javascript: this.style.backgroundColor=getRandomColor()" onmouseout="this.style.backgroundColor=&#39;#3673A5&#39;">
+    <p align="center"><font face="Calibri" color="#C0C0C0"><a target="_blank" href="https://kelleybioinfo.org/algorithms/basics/basics/biologyinthecomputer.pdf">Biology in the Computer</a></font></p></td>
+  </tr>
+  <tr>
+    <td width="100%" height="34" bgcolor="#1E3F5C">
+    <p align="center"><b><font face="Calibri" color="#FFFFFF">Data Format</font></b></p></td>
+  </tr>
+  <tr>
+    <td width="100%" height="34" onmouseover="javascript: this.style.backgroundColor=getRandomColor()" onmouseout="this.style.backgroundColor=&#39;#3673A5&#39;">
+    <p align="center"><font face="Calibri" color="#C0C0C0"><a target="_blank" href="https://kelleybioinfo.org/algorithms/basics/dataformat/sequencefiles.pdf">Sequence files</a></font></p></td>
+  </tr>
+  <tr>
+    <td width="100%" height="34" onmouseover="javascript: this.style.backgroundColor=getRandomColor()" onmouseout="this.style.backgroundColor=&#39;#3673A5&#39;">
+    <p align="center"><font face="Calibri" color="#C0C0C0"><a target="_blank" href="https://kelleybioinfo.org/algorithms/basics/dataformat/alignments.pdf">Alignments</a></font></p></td>
+  </tr>
+  <tr>
+    <td width="100%" height="34" bgcolor="#1E3F5C">
+    <p align="center"><b><font face="Calibri" color="#FFFFFF">Databases</font></b></p></td>
+  </tr>
+ <tr>
+    <td width="100%" height="34" onmouseover="javascript: this.style.backgroundColor=getRandomColor()" onmouseout="this.style.backgroundColor=&#39;#3673A5&#39;">
+    <p align="center"><font face="Calibri" color="#C0C0C0"><a target="_blank" href="https://kelleybioinfo.org/algorithms/basics/databases/ncbi.pdf">
+    NCBI</a></font></p></td>
+  </tr>
+ <!---  
+ <tr>
+    <td width="100%" height="34" onmouseover="javascript: this.style.backgroundColor=getRandomColor()" onmouseout="this.style.backgroundColor='#3673A5'">
+    <p align="center"><font face="Calibri" color="#C0C0C0"><a target="_blank" href="databases/pubmed.pdf">
+    PubMed</a></font></td>
+  </tr>
+  <tr>
+    <td width="100%" height="34" onmouseover="javascript: this.style.backgroundColor=getRandomColor()" onmouseout="this.style.backgroundColor='#3673A5'">
+    <p align="center"><font face="Calibri" color="#C0C0C0">
+    <a target="_blank" href="databases/microbialgenomics.pdf" style="color: #C0C0C0; text-decoration: none">
+    Microbial Genomics</a></font></td>
+  </tr>
+  <tr>
+    <td width="100%" height="34" onmouseover="javascript: this.style.backgroundColor=getRandomColor()" onmouseout="this.style.backgroundColor='#3673A5'">
+    <p align="center"><font face="Calibri" color="#C0C0C0"><a target="_blank" href="databases/blast.pdf">
+    BLAST</a></font></td>
+  </tr>
+  --->
+  <tr>
+    <td width="100%" height="34" onmouseover="javascript: this.style.backgroundColor=getRandomColor()" onmouseout="this.style.backgroundColor=&#39;#3673A5&#39;">
+    <p align="center"><font face="Calibri" color="#C0C0C0"><a target="_blank" href="https://kelleybioinfo.org/algorithms/basics/databases/uniprot.pdf">UniProt</a></font></p></td>
+  </tr>
+  <tr>
+    <td width="100%" height="34" onmouseover="javascript: this.style.backgroundColor=getRandomColor()" onmouseout="this.style.backgroundColor=&#39;#3673A5&#39;">
+    <p align="center"><font face="Calibri" color="#C0C0C0"><a target="_blank" href="https://kelleybioinfo.org/algorithms/basics/databases/ensembl.pdf">Ensembl</a></font></p></td>
+  </tr>
+  <!---
+  <tr>
+    <td width="100%" height="34" onmouseover="javascript: this.style.backgroundColor=getRandomColor()" onmouseout="this.style.backgroundColor='#3673A5'">
+    <p align="center"><font face="Calibri" color="#C0C0C0"><a target="_blank" href="http://rcsb.org/pdb/home/home.do">PDB</a></font></td>
+  </tr> 
+  ---->
+  <tr>
+    <td width="100%" height="34" bgcolor="#1E3F5C">
+    <p align="center"><b><font face="Calibri" color="#FFFFFF">Programming</font></b></p></td>
+  </tr>
+  <tr>
+    <td width="100%" height="34" onmouseover="javascript: this.style.backgroundColor=getRandomColor()" onmouseout="this.style.backgroundColor=&#39;#3673A5&#39;">
+    <p align="center"><font face="Calibri" color="#C0C0C0"><a target="_blank" href="https://kelleybioinfo.org/algorithms/basics/programming/unix.pdf">Unix</a></font></p></td>
+  </tr>
+  <tr>
+    <td width="100%" height="34" onmouseover="javascript: this.style.backgroundColor=getRandomColor()" onmouseout="this.style.backgroundColor=&#39;#3673A5&#39;">
+    <p align="center"><font face="Calibri" color="#C0C0C0"><a target="_blank" href="https://kelleybioinfo.org/algorithms/basics/programming/r.pdf">R</a></font></p></td>
+  </tr>
+  <tr>
+    <td width="100%" height="35" onmouseover="javascript: this.style.backgroundColor=getRandomColor()" onmouseout="this.style.backgroundColor=&#39;#3673A5&#39;">
+    <p align="center"><font face="Calibri" color="#C0C0C0"><a target="_blank" href="https://kelleybioinfo.org/algorithms/basics/programming/python.pdf">Python</a></font></p></td>
+  </tr>
+
+  <tr>
+    <td width="100%" height="34" bgcolor="#1E3F5C">
+    <p align="center"><b><font face="Calibri" color="#FFFFFF">Learning</font></b></p></td>
+  </tr>
+  <tr>
+    <td width="100%" height="34" onmouseover="javascript: this.style.backgroundColor=getRandomColor()" onmouseout="this.style.backgroundColor=&#39;#3673A5&#39;">
+    <p align="center"><font face="Calibri" color="#C0C0C0"><a target="_self" href="https://kelleybioinfo.org/algorithms/basics/anticipatory">Anticipatory</a></font></p></td>
+  </tr>
+  <tr>
+    <td width="100%" height="34" onmouseover="javascript: this.style.backgroundColor=getRandomColor()" onmouseout="this.style.backgroundColor=&#39;#3673A5&#39;">
+    <p align="center"><font face="Calibri" color="#C0C0C0"><a target="_self" href="https://kelleybioinfo.org/algorithms/basics/python">Python</a></font></p></td>
+  </tr>
+  
+  <tr>
+    <td width="100%" height="34" bgcolor="#1E3F5C">
+    <p align="center"><b><font face="Calibri" color="#FFFFFF">Insert Coin To Play</font></b></p></td>
+  </tr>
+  <tr>
+    <td width="100%" height="94" onmouseover="javascript: this.style.backgroundColor=getRandomColor()" onmouseout="this.style.backgroundColor=&#39;#3673A5&#39;">
+    <p align="center"><a title="Insert Coin To Play" target="_top" href="https://kelleybioinfo.org/algorithms/login/login.php"><img border="0" src="./Bioinformatics_ Dr. Kelley&#39;s Lab_files/InsertCoin.jpg" width="40px"></a></p></td>
+  </tr>
+
+</tbody></table>
+</div>
+
+
+		
+		</td>
+	</tr>
+</tbody></table>
+</div>
+
+<div align="center">
+  <center>
+
+<table style="border-collapse: collapse" cellpadding="0" cellspacing="0"><tbody><tr><td height="1" align="center"><font face="Arial" size="1">
+		<a target="_blank" href="http://www.bio.sdsu.edu/faculty/kelley/">
+		<font color="#C0C0C0">Scott Kelley Lab</font></a><font color="#C0C0C0"> | 
+		</font> <a href="mailto:dennisdidulo@gmail.com?subject=Dr.%20Scott%20Kelley%27s%20Bioinformatics%20Algorithms%20Webpage">
+		<font color="#C0C0C0">Webmaster</font></a></font>
+	</td></tr>
+	<tr><td height="1" align="center">
+		<font color="#C0C0C0" face="Arial" size="1">Copyright � 2015. All Rights Reserved.</font>
+	</td></tr>
+</tbody></table></center></div></body></html>
